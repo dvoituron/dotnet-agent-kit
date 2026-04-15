@@ -46,7 +46,7 @@ public class Math
 ```
 
 ### Line Length
-- Keep the length of each line under **130 characters**. See [AV2400](https://csharpcodingguidelines.com//layout-guidelines/#AV2400).
+- Keep the length of each line under **130 characters**. See [AV2400](https://csharpcodingguidelines.com/layout-guidelines/#AV2400).
 - Break long lines **after the period sign**:
 
 ```csharp

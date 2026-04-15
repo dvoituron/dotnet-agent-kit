@@ -9,7 +9,7 @@ tags: naming, async, await, task
 
 Methods that return commonly awaitable types (`Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`) should have names ending with **Async**.
 
-Reference: [AV1755](https://csharpcodingguidelines.com//naming-guidelines/#AV1755), [VSTHRD200](https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md)
+Reference: [AV1755](https://csharpcodingguidelines.com//naming-guidelines/#AV1755), [VSTHRD200](https://microsoft.github.io/vs-threading/analyzers/VSTHRD200.html)
 
 **Correct:**
 
@@ -26,9 +26,9 @@ bool DoSomethingElse()
 }
 ```
 
-## Eliding `Async` and `Await`
+## Omitting `Async` and `Await`
 
-Eliding `async`/`await` is more efficient — the compiler skips generating the async state machine, reducing GC pressure and CPU instructions.
+Omitting `async`/`await` is more efficient — the compiler skips generating the async state machine, reducing GC pressure and CPU instructions.
 
 **Guidelines:**
 - Do **not** elide by default. Use `async`/`await` for natural, easy-to-read code.

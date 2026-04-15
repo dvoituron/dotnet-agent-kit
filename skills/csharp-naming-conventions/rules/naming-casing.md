@@ -32,21 +32,28 @@ public class DataService
 
 **Complete reference table:**
 
-| Item              | Case   | Example                              |
-| ----------------- | ------ | ------------------------------------ |
-| Namespace         | Pascal | `System.File.Directory`              |
-| Class             | Pascal | `AppDomain`                          |
-| Class Exception   | Pascal | `WebException` (suffix `Exception`)  |
-| Interface         | Pascal | `IDisposable` (prefix `I`)           |
-| Event             | Pascal | `ValueChange`                        |
-| Enum Type         | Pascal | `ErrorLevel`                         |
-| Enum Value        | Pascal | `FatalError`                         |
-| Variable Private  | Camel  | `_lastName` (prefix `_`)             |
-| Variable Local    | Camel  | `lastName`                           |
-| Read Only         | Pascal | `RedColor`                           |
-| Constant          | UPPER  | `BLUE`                               |
-| Method            | Pascal | `ToString()`                         |
-| Property          | Pascal | `BackColor`                          |
-| Parameter         | Camel  | `typeName`                           |
+| Item                                  | Case   | Example                              |
+| ------------------------------------- | ------ | ------------------------------------ |
+| Namespace                             | Pascal | `System.File.Directory`              |
+| Type parameter                        | Pascal | `TView`                              |
+| Interface                             | Pascal | `IDisposable` (prefix `I`)           |
+| Class, Struct                         | Pascal | `AppDomain`                          |
+| Enum Type                             | Pascal | `ErrorLevel`                         |
+| Enum Value                            | Pascal | `FatalError`                         |
+| Resource key                          | Pascal | `SaveButtonTooltipText`              |
+| Constant                              | Pascap | `Blue`, `MaximumItems`               |
+| Private static                        | Pascal | `RedValue`                           |
+| Class Exception                       | Pascal | `WebException` (suffix `Exception`)  |
+| Event                                 | Pascal | `ValueChange`                        |
+| Variable Private                      | Camel  | `_lastName` (prefix `_`)             |
+| Variable Local                        | Camel  | `lastName`                           |
+| Private field                         | Camel  | `listItem`                           |
+| Read Only                             | Pascal | `RedColor`                           |
+| Method                                | Pascal | `ToString()`                         |
+| Property                              | Pascal | `BackColor`                          |
+| Parameter                             | Camel  | `typeName`                           |
+| Local function                        | Pascal | `FormatText`                         |
+| Tuple element names                   | Pascal | `(string First, string Last) name = ("John", "Doe"); var name = (First: "John", Last: "Doe"); (string First, string Last) GetName() => ("John", "Doe");` |
+| Variables declared using tuple syntax | Camel | `(string first, string last) = ("John", "Doe"); var (first, last) = ("John", "Doe");` |
 
 Reference: [CSharp Coding Guidelines](https://csharpcodingguidelines.com/)

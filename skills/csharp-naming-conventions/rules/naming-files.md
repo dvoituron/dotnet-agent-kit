@@ -12,7 +12,8 @@ Organize your files in separate folders to respect these rules:
 - **One class = one file.**
 - **Class name = file name.**
 - **Each namespace into folders with same names.**
-- **A few dozen lines** per file — otherwise, split into methods or partial classes.
+- **No more than a few dozen lines per method**, otherwise, break it down into several submethods
+- **No more than a few hundred lines per file**, otherwise, split into methods or partial classes.
 
 **Correct:**
 
