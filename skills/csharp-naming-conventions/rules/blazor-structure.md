@@ -13,7 +13,6 @@ Organize files following [SOLID](https://en.wikipedia.org/wiki/SOLID) principles
 
 - Group pages and dialogs of the **same module** in a sub-folder of **Pages** folder, with the module name (pluralized): `Pages\Calendars\`.
 - Suffix pages with **Page.razor** and dialogs with **Dialog.razor** (singular): `CalendarMainPage.razor`, `CalendarEditDialog.razor`.
-- (Optional) Put dialog parameters in `[Name]Dialog.razor.Parameters.cs` for nested file display.
 - Dialog box logic (saving data, etc.) must be in the dialog class itself (e.g., `OnCloseAsync`). Don't write dialog logic in the calling page.
 - Shared components go in **Components** folder, suffixed with `Component`.
 
@@ -33,7 +32,6 @@ Organize files following [SOLID](https://en.wikipedia.org/wiki/SOLID) principles
 |   |   |-- CalendarEditDialog.razor
 |   |   |-- CalendarEditDialog.razor.cs
 |   |   |-- CalendarEditDialog.razor.css
-|   |   |-- CalendarEditDialog.razor.Parameters.cs
 ```
 
 ### File Nesting
