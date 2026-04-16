@@ -11,7 +11,6 @@ This skill contains 22 rules across 6 categories, ordered by impact:
 | Naming & Casing | CRITICAL | Pascal/Camel case, file organization, identifier naming |
 | Code Layout & Formatting | HIGH | Indentation, braces, line length, member ordering |
 | Code Patterns | HIGH | Variables, comments, namespaces, if patterns, strings, exceptions, operators, conversions, DateTime, static |
-| Git Conventions | MEDIUM | Branching, commits, pull requests |
 | Unit Testing | HIGH | Best practices, code coverage, Blazor testing with bUnit |
 | Blazor Conventions | MEDIUM-HIGH | Components, structure, JS interop, CSS isolation, performance |
 
@@ -43,7 +42,6 @@ skills/csharp-naming-conventions/
     ├── naming-*.md       # Naming and casing rules
     ├── layout-*.md       # Code layout rules
     ├── code-*.md         # Code pattern rules
-    ├── git-*.md          # Git convention rules
     ├── testing-*.md      # Unit testing rules
     └── blazor-*.md       # Blazor convention rules
 ```

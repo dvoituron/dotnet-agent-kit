@@ -2,10 +2,9 @@
 name: csharp-naming-conventions
 description: |
   C# and .NET naming conventions, coding best practices, layout rules,
-  Git workflow, unit testing, and Blazor component guidelines. Use when
-  writing, reviewing, or refactoring C# / .NET / Blazor code, setting up
-  Git branching and commit conventions, or writing unit tests with xUnit
-  and bUnit.
+  unit testing, and Blazor component guidelines. Use when
+  writing, reviewing, or refactoring C# / .NET / Blazor code or writing 
+  unit tests with xUnit and bUnit.
 license: MIT
 metadata:
   author: dvoituron
@@ -15,7 +14,7 @@ metadata:
 # C# Naming Conventions and Best Practices
 
 Comprehensive coding guidelines for .NET and C# developments, covering naming,
-layout, code patterns, Git workflow, unit testing, and Blazor conventions.
+layout, code patterns, unit testing, and Blazor conventions.
 Prioritized by impact to guide automated code generation and review.
 
 ## When to Apply
@@ -27,7 +26,6 @@ Reference these guidelines when:
 - Formatting and laying out source files
 - Working with async/await patterns
 - Writing if/else, string, exception, or conversion logic
-- Setting up Git branches and writing commit messages
 - Writing or reviewing unit tests (xUnit, bUnit)
 - Building Blazor components and pages
 - Organizing project file structures
@@ -39,9 +37,8 @@ Reference these guidelines when:
 | 1 | Naming & Casing | CRITICAL | `naming-` |
 | 2 | Code Layout & Formatting | HIGH | `layout-` |
 | 3 | Code Patterns | HIGH | `code-` |
-| 4 | Git Conventions | MEDIUM | `git-` |
-| 5 | Unit Testing | HIGH | `testing-` |
-| 6 | Blazor Conventions | MEDIUM-HIGH | `blazor-` |
+| 4 | Unit Testing | HIGH | `testing-` |
+| 5 | Blazor Conventions | MEDIUM-HIGH | `blazor-` |
 
 ## Quick Reference
 
@@ -70,18 +67,13 @@ Reference these guidelines when:
 - [code-datetime](rules/code-datetime.md) - DateTimeProvider for testable date/time code
 - [code-static](rules/code-static.md) - Avoid static classes except for extension methods
 
-### 4. Git Conventions (MEDIUM)
-
-- [git-workflow](rules/git-workflow.md) - Git branching, pull requests, and workflow
-- [git-naming](rules/git-naming.md) - Branch naming, commit message format
-
-### 5. Unit Testing (HIGH)
+### 4. Unit Testing (HIGH)
 
 - [testing-practices](rules/testing-practices.md) - Seven best practices for unit tests
 - [testing-coverage](rules/testing-coverage.md) - Code coverage with Coverlet and ReportGenerator
 - [testing-blazor](rules/testing-blazor.md) - Blazor unit tests with bUnit and Verifier
 
-### 6. Blazor Conventions (MEDIUM-HIGH)
+### 5. Blazor Conventions (MEDIUM-HIGH)
 
 - [blazor-components](rules/blazor-components.md) - Component naming, routing, and file structure
 - [blazor-structure](rules/blazor-structure.md) - Project folder organization with SOLID principles

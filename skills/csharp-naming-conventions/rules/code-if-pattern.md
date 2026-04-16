@@ -7,7 +7,8 @@ tags: code, if, braces, guard-pattern, conditionals
 
 ## If Pattern
 
-Prefer **positive conditionals** and method names: `if (a > b)` is better than `if (a !<= b)`.
+Prefer **positive conditionals** and method names: `if (a > b)` is better than `if (a !<= b)`;
+and `if (a == b)` is better than `if (a != b)`.
 
 ### a. Always Use Braces
 

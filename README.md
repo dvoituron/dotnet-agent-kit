@@ -19,7 +19,6 @@ C# and .NET naming conventions and best practices containing 22+ rules across
 - Reviewing or refactoring existing C# code
 - Naming classes, methods, variables, properties, or parameters
 - Formatting and laying out source files
-- Setting up Git branches and writing commit messages
 - Writing or reviewing unit tests (xUnit, bUnit)
 - Building Blazor components and pages
 
@@ -27,7 +26,6 @@ C# and .NET naming conventions and best practices containing 22+ rules across
 - Naming & Casing (Critical)
 - Code Layout & Formatting (High)
 - Code Patterns (High)
-- Git Conventions (Medium)
 - Unit Testing (High)
 - Blazor Conventions (Medium-High)
 
@@ -68,9 +66,6 @@ Create a new Blazor component following best practices
 ```
 Write unit tests for my service class
 ```
-```
-Help me set up Git branching conventions for the team
-```
 
 ## Skill Structure
 
@@ -90,7 +85,6 @@ skills/csharp-naming-conventions/
     ├── naming-*.md       # Naming and casing rules
     ├── layout-*.md       # Code layout rules
     ├── code-*.md         # Code pattern rules
-    ├── git-*.md          # Git convention rules
     ├── testing-*.md      # Unit testing rules
     └── blazor-*.md       # Blazor convention rules
 ```

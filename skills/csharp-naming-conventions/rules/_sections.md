@@ -16,19 +16,13 @@
 
 **Description:** Coding patterns for variables, comments, namespaces, conditionals, strings, exceptions, operators, type conversions, DateTime handling, and static usage. Following these patterns ensures clean, maintainable, and testable code.
 
-## 4. Git Conventions (git)
-
-**Impact:** MEDIUM
-
-**Description:** Git workflow conventions for branching, commit messages, and pull requests. Consistent Git usage enables smooth collaboration, clean history, and efficient code reviews.
-
-## 5. Unit Testing (testing)
+## 4. Unit Testing (testing)
 
 **Impact:** HIGH
 
 **Description:** Unit testing best practices including test naming, AAA pattern, code coverage, and Blazor testing. Well-written tests serve as executable documentation and protect against regressions.
 
-## 6. Blazor Conventions (blazor)
+## 5. Blazor Conventions (blazor)
 
 **Impact:** MEDIUM-HIGH
 

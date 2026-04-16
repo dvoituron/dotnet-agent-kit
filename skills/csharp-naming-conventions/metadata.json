@@ -1,14 +1,13 @@
 {
   "name": "csharp-naming-conventions",
   "version": "0.0.4",
-  "description": "C# and .NET naming conventions, coding best practices, layout rules, Git workflow, unit testing, and Blazor component guidelines.",
+  "description": "C# and .NET naming conventions, coding best practices, layout rules, unit testing, and Blazor component guidelines.",
   "author": "dvoituron",
   "license": "MIT",
   "categories": [
     "naming-casing",
     "code-layout",
     "code-patterns",
-    "git-conventions",
     "unit-testing",
     "blazor-conventions"
   ],
@@ -19,7 +18,6 @@
     "naming-conventions",
     "best-practices",
     "unit-testing",
-    "git",
     "code-style"
   ]
 }
