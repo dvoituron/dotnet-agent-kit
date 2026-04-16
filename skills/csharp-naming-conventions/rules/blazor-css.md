@@ -26,7 +26,7 @@ Use `::deep` [pseudo-element](https://developer.mozilla.org/docs/Web/CSS/Pseudo-
 **Add a common prefix to all style names** to avoid conflicts with other projects or libraries:
 
 ```css
-.studio-nsi-popup {
+.my-project-popup {
     /* ... */
 }
 ```

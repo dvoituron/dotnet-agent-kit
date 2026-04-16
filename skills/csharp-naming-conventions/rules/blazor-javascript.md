@@ -9,7 +9,8 @@ tags: blazor, javascript, interop, collocation
 
 > Avoid too many calls between .NET and JavaScript — calls are asynchronous, parameters are JSON-serialized, and on Blazor Server they cross the network.
 
-Use [collocated JavaScript files](https://docs.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-6.0#load-a-script-from-an-external-javascript-file-js-collocated-with-a-component) for component-specific JS. This centralizes JS code, avoids global functions, and loads code only when needed.
+Use [collocated JavaScript files](https://docs.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-6.0#load-a-script-from-an-external-javascript-file-js-collocated-with-a-component) for component-specific JS. 
+This centralizes JS code, avoids global functions, and loads code only when needed.
 
 > If a JavaScript function is used by at least 3 components, include it in a global file (`wwwroot/js`).
 
@@ -29,7 +30,7 @@ export function myModule_myJsMethod() {
 private const string JAVASCRIPT_FILE = "./Pages/[Path]/[Component].razor.js";
 
 [Inject]
-private IJSRuntime JsRuntime { get; set; } = default!;
+private required IJSRuntime JsRuntime { get; set; }
 
 private IJSObjectReference JsModule { get; set; } = default!;
 ```

@@ -14,15 +14,15 @@ Code coverage measures the amount of code run by unit tests — lines, branches,
 Include NuGet packages in your unit tests project:
 
 ```xml
-<PackageReference Include="coverlet.msbuild" Version="3.1.2" />
-<PackageReference Include="coverlet.collector" Version="3.1.2" />
+<PackageReference Include="coverlet.msbuild" Version="8.0.1" />
+<PackageReference Include="coverlet.collector" Version="8.0.1" />
 ```
 
 ### 2. Install Tools
 
 ```bash
-dotnet tool install --global coverlet.console --version 3.1.2
-dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
+dotnet tool install --global coverlet.console --version 8.0.1
+dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.5.5
 ```
 
 Verify with:
