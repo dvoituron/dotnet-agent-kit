@@ -32,18 +32,22 @@ Reference: [ASP.NET Core Blazor component lifecycle](https://learn.microsoft.com
 
 ### Use SetParametersAsync instead of OnParametersSet
 
-Prefer overriding `SetParametersAsync` over `OnParametersSet` or `OnParametersSetAsync` when you need to react to parameter changes. 
-`OnParametersSet` is called **every time any parameter changes**, with no way to know which specific parameter was updated.
-`SetParametersAsync` gives you direct access to the incoming `ParameterView`, allowing you to check exactly which parameters changed before applying logic or triggering a re-render.
+**RULE**: Override `SetParametersAsync` instead of `OnParametersSet` or `OnParametersSetAsync` when reacting to parameter changes.
+
+**REQUIREMENTS**:
+- DO NOT use `OnParametersSet` or `OnParametersSetAsync` to react to specific parameter changes — they fire on **every** parameter change with no way to identify which one changed.
+- USE `parameters.TryGetValue<T>(nameof(Param), out var newValue)` to inspect which parameters actually changed.
+- ALWAYS compare `newValue != CurrentValue` before executing expensive logic to avoid redundant computation.
+- ALWAYS call `await base.SetParametersAsync(parameters)` at the end.
 
 ```csharp
-// Incorrect: no way to know which parameter changed
+// ❌ Incorrect: triggers on every parameter change, cannot identify which one changed
 protected override void OnParametersSet()
 {
     _data = ComputeExpensiveResult(Value);
 }
 
-// Correct: inspect which parameters actually changed
+// ✅ Correct: inspect exactly which parameters changed, skip logic if value is unchanged
 public override async Task SetParametersAsync(ParameterView parameters)
 {
     if (parameters.TryGetValue<int>(nameof(Value), out var newValue) && newValue != Value)
