@@ -2,7 +2,7 @@
 title: Blazor Performance
 impact: MEDIUM-HIGH
 impactDescription: Poor rendering patterns cause slow, unresponsive Blazor applications
-tags: blazor, performance, rendering, optimization
+tags: blazor, performance, rendering, optimization, parameters
 ---
 
 ## Blazor Performance
@@ -29,6 +29,31 @@ protected override async Task OnInitializedAsync()
 ```
 
 Reference: [ASP.NET Core Blazor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle)
+
+### Use SetParametersAsync instead of OnParametersSet
+
+Prefer overriding `SetParametersAsync` over `OnParametersSet` or `OnParametersSetAsync` when you need to react to parameter changes. 
+`OnParametersSet` is called **every time any parameter changes**, with no way to know which specific parameter was updated.
+`SetParametersAsync` gives you direct access to the incoming `ParameterView`, allowing you to check exactly which parameters changed before applying logic or triggering a re-render.
+
+```csharp
+// Incorrect: no way to know which parameter changed
+protected override void OnParametersSet()
+{
+    _data = ComputeExpensiveResult(Value);
+}
+
+// Correct: inspect which parameters actually changed
+public override async Task SetParametersAsync(ParameterView parameters)
+{
+    if (parameters.TryGetValue<int>(nameof(Value), out var newValue) && newValue != Value)
+    {
+        _data = ComputeExpensiveResult(newValue);
+    }
+
+    await base.SetParametersAsync(parameters);
+}
+```
 
 ### Avoid Unnecessary Rendering
 1. Ensure child component parameters are of **primitive immutable types**.
