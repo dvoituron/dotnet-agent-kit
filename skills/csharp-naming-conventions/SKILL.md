@@ -79,7 +79,7 @@ Reference these guidelines when:
 - [blazor-structure](rules/blazor-structure.md) - Project folder organization with SOLID principles
 - [blazor-code](rules/blazor-code.md) - Methods, properties order, inject, and nullable defaults
 - [blazor-javascript](rules/blazor-javascript.md) - JavaScript interop and collocated JS files
-- [blazor-css](rules/blazor-css.md) - CSS isolation and ::deep pseudo-element usage
+- [blazor-css](rules/blazor-css.md) - CSS isolation, root class and attribute selectors
 - [blazor-performance](rules/blazor-performance.md) - Rendering, cascading parameters, and optimization
 
 ## How to Use
