@@ -31,22 +31,20 @@ C# and .NET naming conventions and best practices containing 22+ rules across
 
 ## Installation
 
-### GitHub Copilot (VS Code)
+### GitHub CLI
 
-Copy the skill into your `.copilot/skills/` directory:
+1. Install the [WinGet Package Manage](https://github.com/microsoft/winget-cli) if you haven't already.
+2. Install or update the [GitHub CLI](https://github.com/cli/cli) to version 2.90 or more:
+   - `winget install --id GitHub.cli`
+   - `winget upgrade --id GitHub.cli`
+3. In your repo folder, run this command:
+   ```bash
+   gh skill install dvoituron/dotnet-agent-kit
+   ```
 
-```bash
-# From the repo root
-cp -r skills/csharp-naming-conventions .copilot/skills/csharp-naming-conventions
-```
+   You can then run the `gh skill update` command to get the latest version.
 
-### Claude Code
-
-```bash
-cp -r skills/csharp-naming-conventions ~/.claude/skills/csharp-naming-conventions
-```
-
-### Other Agents
+### Manually
 
 Copy the `skills/csharp-naming-conventions` folder into your agent's skill directory.
 Refer to your agent's documentation for the exact location.
