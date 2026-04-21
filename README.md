@@ -49,6 +49,20 @@ C# and .NET naming conventions and best practices containing 22+ rules across
 Copy the `skills/csharp-naming-conventions` folder into your agent's skill directory.
 Refer to your agent's documentation for the exact location.
 
+### copilot-instructions.md
+
+You can also add the following instruction to your
+[`.github/copilot-instructions.md`](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)
+file to ensure the skill is consistently applied across your project:
+
+```
+# Copilot Instructions
+
+## Skills
+
+- When writing, reviewing, or refactoring C# / .NET / Blazor code, or when authoring unit tests with xUnit and bUnit, load and follow the [csharp-naming-conventions](skills/csharp-naming-conventions/SKILL.md) skill. Read the `SKILL.md` file with the `read_file` tool before producing code so the conventions, layout rules, and testing guidelines are applied.
+```
+
 ## Usage
 
 Skills are automatically available once installed. The agent will use them when
