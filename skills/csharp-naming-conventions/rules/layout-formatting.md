@@ -56,6 +56,41 @@ var dto = service.GetEmployees()
                  .ToArray();
 ```
 
+### Method Calls and Arguments
+
+- Keep method calls and their arguments on **one line**.
+- When a call would reach or exceed **130 characters**, extract long argument expressions into clearly named local variables to shorten the call. Preserve evaluation order and behavior.
+- Use a multiline call only as a last resort when local variables cannot keep the call under the line-length limit, or when an argument requires a multiline block, such as a statement lambda.
+
+**Correct:**
+
+```csharp
+await Profiles.UpdateAsync(profile, cancellationToken);
+```
+
+**Incorrect:**
+
+```csharp
+await Profiles.UpdateAsync(
+    profile,
+    cancellationToken);
+```
+
+**Correct (shorten a long argument expression):**
+
+```csharp
+var profile = Mapper.CreateProfile(currentUser, selectedPreferences, organizationSettings);
+await Profiles.UpdateAsync(profile, cancellationToken);
+```
+
+**Incorrect:**
+
+```csharp
+await Profiles.UpdateAsync(
+    Mapper.CreateProfile(currentUser, selectedPreferences, organizationSettings),
+    cancellationToken);
+```
+
 ### Keyword and Operator Spacing
 - Keep **one space between keywords** and expressions: `if (condition == null)`.
 - Do not add spaces after `(` and before `)`.

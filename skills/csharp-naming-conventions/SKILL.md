@@ -51,11 +51,12 @@ Reference these guidelines when:
 
 ### 2. Code Layout & Formatting (HIGH)
 
-- [layout-formatting](rules/layout-formatting.md) - Indentation, braces, line length, and formatting rules
+- [layout-formatting](rules/layout-formatting.md) - Indentation, braces, line length, and single-line method calls with local variables for long arguments
 - [layout-members-order](rules/layout-members-order.md) - Member ordering within classes and no #region usage
 
 ### 3. Code Patterns (HIGH)
 
+- [code-constructors](rules/code-constructors.md) - Explicit traditional constructors instead of primary constructors for classes
 - [code-variables](rules/code-variables.md) - Variable declarations, var usage, access modifiers
 - [code-comments](rules/code-comments.md) - Commenting conventions and XML documentation
 - [code-using-namespace](rules/code-using-namespace.md) - Using directives and file-scoped namespaces
