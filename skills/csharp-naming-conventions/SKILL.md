@@ -8,7 +8,7 @@ description: |
 license: MIT
 metadata:
   author: dvoituron
-  version: "0.0.4"
+  version: "1.0.1"
 ---
 
 # C# Naming Conventions and Best Practices

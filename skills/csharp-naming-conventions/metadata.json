@@ -1,6 +1,6 @@
 {
   "name": "csharp-naming-conventions",
-  "version": "0.0.4",
+  "version": "1.0.1",
   "description": "C# and .NET naming conventions, coding best practices, layout rules, unit testing, and Blazor component guidelines.",
   "author": "dvoituron",
   "license": "MIT",
